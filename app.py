@@ -92,8 +92,7 @@ app.layout = html.Div(
                     children="Corona Analytics", className="header-title"
                 ),
                 html.P(
-                    children="Analyze the behavior of Corona Cases in CA"
-                    " and the number of cases in the US"
+                    children="Analyze the behavior of Corona Cases"
                     " between 2020 and 2021",
                     className="header-description",
                 ),
