@@ -6,7 +6,7 @@ import pandas as pd
 import plotly.express as px
 
 
-data = pd.read_csv("C:/Users/Chance/Desktop/corona/covid_19_data.csv")
+data = pd.read_csv("covid_19_data.csv")
 data = data.rename({"Country/Region": "Country", "Province/State": "State"}, axis=1)
 data["ObservationDate"] = pd.to_datetime(data["ObservationDate"])
 data.sort_values("ObservationDate", inplace=True)
@@ -24,6 +24,8 @@ ext_style = [
 ]
 
 app = dash.Dash(__name__, external_stylesheets=ext_style)
+
+server = app.server
 
 app.title = "Corona Virus Cases"
 
